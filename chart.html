@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  
+  <body>
+    <div>
+      <canvas id="myChart" style="width: 400px;height: 400px;position: fixed;"></canvas>
+    </div>
+    
+    
+    <script  src="chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+    
+     const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = ["red", "green","blue","orange","brown"];
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {}
+});
+    </script>
+     
+    </script>
+  </body>
+</html>

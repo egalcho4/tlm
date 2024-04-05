@@ -1,0 +1,355 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<title>.</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="home.css" />
+
+<style>
+
+
+</style>
+<body class="bg-success" onload="body()">
+	<div class="container-sm shadow bg-info">
+		<span style="font-size:30px;cursor:
+			pointer" id="menu" onclick="openNav()">
+		</span>
+		<span>
+			<a href="#"><input type="text" name="" id="" class="glyphicon glyphicon-search" placeholder="search..." value="" style="width:150px;border-radius:20px;margin-left:50px" />
+			</a>
+		</span>
+
+		<span class="glyicon-bell" style="border-radius:50%;color:red;margin-left:50px"></span>
+
+<div class="dropdowna">
+
+
+			<img src="m.jpg" alt="" onclick="myFunctiona()" class="dropbtna" style="width:30px;height:30px;border-radius:50%;margin-left:30px" id="img" />
+
+			<div id="myDropdowna"
+				class="dropdown-contenta" style="display:none">
+				<a href="home.html">home</a>
+				<a href="wus.html">doc</a>
+				<a href="about.html">About us</a>
+				<a href="" id="ad" style="display:none">advert</a>
+				 <a href="" id="ad" style="display:none">advert</a>
+                 <a href="" id="con" style="display:none">contact info</a>
+				<a href="#" onclick="window.open('index.html','_self')">logout</a>
+			</div>
+
+
+
+
+
+</div>
+
+	</span>
+
+	<div id="mySidenav" class="sidenav bg-success ">
+		<a href="javascript:void(0)"
+			class="closebtn"
+			onclick="closeNav()">&times;</a>
+		<div class="container-sm bg-white shadow m-2" style="width:200px">
+
+
+			<a href="#">home</a>
+			<a onclick="myFunction()"
+				class="btn dropbtn bg-primary " style="color:white">Academic </a>
+
+			<div id="myDropdown"
+				class="dropdown-content">
+
+
+				<a href="reg/reg.html" id="a1" onclick="window1()" class="" style="color:">
+					register students </a>
+				<a href="subj.html" id="a2" onclick="window2()" class=" " style="color">manage mark </a>
+
+				<a href="atend/subj.html" id="a3" onclick="window3()" class="">take attendance </a>
+				<a href="rank.html" id="a4" onclick="window4()" class=""> ranke students </a>
+
+
+			</div>
+		</a>
+		<a href="seting.html" class="">settings</a>
+		<a href="text.html">notebook</a>
+
+        <a href="contact.html" style="display:none">contact us</a>
+
+		<a href="about.html">About us</a>
+
+		<a href="wus.html">docum</a>
+	</div>
+</div>
+
+
+<center>
+	<div class="container-sm shadow bg-white" style="width:250px;margin-left:10px">
+		<b class="btn bg-warning" style="width:100%"> click on plus sign and add your program </b>
+
+		<button id="prog" onclick="document.getElementById('id01').style.display='block';" style="color:red;font-size:20px">&plus;
+
+		</button class="btn btn-secondary"> <span class=""> time:<span id="h1"></span></span>
+	</center>
+	<br /><center>
+		<div class="container-sm shadow bg-white p-2" style="max-height:50px">
+			<table class="table table-condensed table-striped table-responsive table-hover bg-white "
+				id="myTable" style="max-height:400px">
+
+				<thead class="bg-warning">
+					<th scope="col" id="no"><input type="text" style="width:40px;display:none" id="noi"> No</th>
+
+					<th scope="col" id="fname">nameofdate<input type="text" style="width:40px;display:none" id="first"></th>
+					<th scope="col" id="lname">
+
+						program<input type="text" style="width:40px;display:none" id="lnamei">
+					</th>
+					<th scope="col">section </th>
+					<th scope="col" id="mark1">starttime<input type="text" id="mark1i" style="width: 40px;display: none"></th>
+					<th scope="col" id="mark2">
+
+						endtime <input type="text" style="width:40px;display:none" id="mark2i">
+					</th>
+					<th scope="col">update </th>
+
+
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+
+		</div>
+		<h1></h1>
+		<div id="id01" class="modal container-sm shadow">
+
+
+			<form class="modal-content animate" action="" id="form" name="proform" onsubmit="event.preventDefault();form();">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+				</div>
+
+
+				<div class="container-sm shadow p-2">
+					<p class="bg-success ">
+						program form
+					</p>
+					<label for="wday" class="form-label">choose date</label>
+					
+					<select id="" name="wday"  id="wd" class="form-control">
+						<option>monday</option>
+						<option>Tuesday </option>
+						<option>wensday</option>
+						<option>Thursday </option>
+						<option>Friday </option>
+						<option>Saturday </option>
+						<option>sunday</option>
+					</select>
+					<label for="wday" class="form-label">enter your program</label>
+					<input type="text" name="pro" id="pro" value="" class="form-control " />
+					<label for="sec" class="form-label">enter section</label>
+					<input type="text" name="sec" id="sec" value="" class="form-control " />
+					
+					<label for="wday" class="form-label">set time</label>
+					<input type="time" name="time" id="time" value="" class="form-control " />
+					<label for="date" class="form-label">set end time</label>
+					<input type="time" name="date" id="date" value="" class="form-control " />
+
+					<button type="submit" style="width:60%" class="btn btn-primary ">save</button>
+
+				</div>
+			</form>
+
+
+		</div>
+	</center>
+
+	<script src="home.js">
+
+
+	</script>
+	
+
+
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html>
+<title>.</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="home.css" />
+
+<style>
+
+
+</style>
+<body class="bg-success" onload="body()">
+	<div class="container-sm shadow bg-info">
+		<span style="font-size:30px;cursor:
+			pointer" id="menu" onclick="openNav()">
+		</span>
+		<span>
+			<a href="#"><input type="text" name="" id="" class="glyphicon glyphicon-search" placeholder="search..." value="" style="width:150px;border-radius:20px;margin-left:50px" />
+			</a>
+		</span>
+
+		<span class="glyicon-bell" style="border-radius:50%;color:red;margin-left:50px"></span>
+
+<div class="dropdowna">
+
+
+			<img src="m.jpg" alt="" onclick="myFunctiona()" class="dropbtna" style="width:30px;height:30px;border-radius:50%;margin-left:30px" id="img" />
+
+			<div id="myDropdowna"
+				class="dropdown-contenta" style="display:none">
+				<a href="home.html">home</a>
+				<a href="wus.html">doc</a>
+				<a href="about.html">About us</a>
+				<a href="" id="ad" style="display:none">advert</a>
+				 <a href="" id="ad" style="display:none">advert</a>
+                 <a href="" id="con" style="display:none">contact info</a>
+				<a href="#" onclick="window.open('index.html','_self')">logout</a>
+			</div>
+
+
+
+
+
+</div>
+
+	</span>
+
+	<div id="mySidenav" class="sidenav bg-success ">
+		<a href="javascript:void(0)"
+			class="closebtn"
+			onclick="closeNav()">&times;</a>
+		<div class="container-sm bg-white shadow m-2" style="width:200px">
+
+
+			<a href="#">home</a>
+			<a onclick="myFunction()"
+				class="btn dropbtn bg-primary " style="color:white">Academic </a>
+
+			<div id="myDropdown"
+				class="dropdown-content">
+
+
+				<a href="reg/reg.html" id="a1" onclick="window1()" class="" style="color:">
+					register students </a>
+				<a href="subj.html" id="a2" onclick="window2()" class=" " style="color">manage mark </a>
+
+				<a href="atend/subj.html" id="a3" onclick="window3()" class="">take attendance </a>
+				<a href="rank.html" id="a4" onclick="window4()" class=""> ranke students </a>
+
+
+			</div>
+		</a>
+		<a href="seting.html" class="">settings</a>
+		<a href="text.html">notebook</a>
+
+        <a href="contact.html" style="display:none">contact us</a>
+
+		<a href="about.html">About us</a>
+
+		<a href="wus.html">docum</a>
+	</div>
+</div>
+
+
+<center>
+	<div class="container-sm shadow bg-white" style="width:250px;margin-left:10px">
+		<b class="btn bg-warning" style="width:100%"> click on plus sign and add your program </b>
+
+		<button id="prog" onclick="document.getElementById('id01').style.display='block';" style="color:red;font-size:20px">&plus;
+
+		</button class="btn btn-secondary"> <span class=""> time:<span id="h1"></span></span>
+	</center>
+	<br /><center>
+		<div class="container-sm shadow bg-white p-2" style="max-height:50px">
+			<table class="table table-condensed table-striped table-responsive table-hover bg-white "
+				id="myTable" style="max-height:400px">
+
+				<thead class="bg-warning">
+					<th scope="col" id="no"><input type="text" style="width:40px;display:none" id="noi"> No</th>
+
+					<th scope="col" id="fname">nameofdate<input type="text" style="width:40px;display:none" id="first"></th>
+					<th scope="col" id="lname">
+
+						program<input type="text" style="width:40px;display:none" id="lnamei">
+					</th>
+					<th scope="col">section </th>
+					<th scope="col" id="mark1">starttime<input type="text" id="mark1i" style="width: 40px;display: none"></th>
+					<th scope="col" id="mark2">
+
+						endtime <input type="text" style="width:40px;display:none" id="mark2i">
+					</th>
+					<th scope="col">update </th>
+
+
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+
+		</div>
+		<h1></h1>
+		<div id="id01" class="modal container-sm shadow">
+
+
+			<form class="modal-content animate" action="" id="form" name="proform" onsubmit="event.preventDefault();form();">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+				</div>
+
+
+				<div class="container-sm shadow p-2">
+					<p class="bg-success ">
+						program form
+					</p>
+					<label for="wday" class="form-label">choose date</label>
+					
+					<select id="" name="wday"  id="wd" class="form-control">
+						<option>monday</option>
+						<option>Tuesday </option>
+						<option>wensday</option>
+						<option>Thursday </option>
+						<option>Friday </option>
+						<option>Saturday </option>
+						<option>sunday</option>
+					</select>
+					<label for="wday" class="form-label">enter your program</label>
+					<input type="text" name="pro" id="pro" value="" class="form-control " />
+					<label for="sec" class="form-label">enter section</label>
+					<input type="text" name="sec" id="sec" value="" class="form-control " />
+					
+					<label for="wday" class="form-label">set time</label>
+					<input type="time" name="time" id="time" value="" class="form-control " />
+					<label for="date" class="form-label">set end time</label>
+					<input type="time" name="date" id="date" value="" class="form-control " />
+
+					<button type="submit" style="width:60%" class="btn btn-primary ">save</button>
+
+				</div>
+			</form>
+
+
+		</div>
+	</center>
+
+	<script src="home.js">
+
+
+	</script>
+	
+
+
+</body>
+</html>
+>>>>>>> 2738957 (six commit)

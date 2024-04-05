@@ -1,0 +1,365 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <title>Firebase Image Upload using HTML and JavaScript</title>
+   <style>
+      #photo{
+         margin-top: 200px;
+         margin-left: 450px;
+      }
+      #upload{
+         margin-top: 20px;
+         margin-left: 450px;
+      }
+   </style>
+   <link rel="stylesheet" href= "css/bootstrap.min.css"/>
+   <link rel="stylesheet" href= "style.css"/>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+</head>
+<body onload="readOnceWithGet()">
+	<center>
+		<div class="container-sm" style="width: 50%;">
+  <div id="id01" class="modal container-sm shadow">
+
+
+			<form class="modal-content animate" action="" id="form" name="proform" >
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+				</div>
+
+
+				<div class="container-sm shadow p-2">
+					<p class="bg-success ">
+						program form
+					</p>
+               <input type="hidden" name="id" id="id" value="0">
+					
+					<label for="wday" class="form-label">advertasiment</label>
+					<input type="text" name="ln" id="ln" value="" class="form-control " />
+					
+
+					<button type="submit" style="width:60%" class="btn btn-primary " onclick="writeUserData()">save</button>
+
+				</div>
+			</form>
+
+
+		</div>
+       <button id="prog" onclick="document.getElementById('id01').style.display='block';" style="color:red;font-size:20px">&plus;
+
+		</button>
+      <input type="text" name="" id="search" class="form-control" style="width:20%">
+      <button onclick="search()">search</button>
+      
+
+   
+<table class="table table-hover table-striped" id="mytable" style="width: 400px;">
+	<th>id</th>
+	
+	<th>posts</th>
+	
+   <th>delete</th>
+	<tbody>
+		
+	</tbody>
+	
+
+
+</div></center>
+
+<script type="text/JavaScript">
+
+   
+   const firebaseConfig = {
+      apiKey: "AIzaSyCUyKCnYL8iRaR_rYEcf9lh_2prGWL8x_A",
+  authDomain: "realegalcho.firebaseapp.com",
+  projectId: "realegalcho",
+  storageBucket: "realegalcho.appspot.com",
+  messagingSenderId: "1073455577466",
+  appId: "1:1073455577466:web:7473332966c7026ecffec3",
+  measurementId: "G-2WP627XMXD"
+   };
+
+  
+   firebase.initializeApp(firebaseConfig);
+   
+function writeUserData(n, date) {
+	
+     
+       var id=document.querySelector('#id').value;
+  
+
+	var date=1;
+	
+    var ln = document.getElementById('ln').value;
+   
+  firebase.database().ref('adv/' + date).set({
+    id:date,
+   
+   
+    lname:ln,
+   
+   
+  });
+  document.getElementById('id01').style.display="none";
+  alert("sussfuly uploaded");
+
+}
+     
+         
+
+           function readOnceWithGet(data) {
+            
+         var ds = document.getElementById('ds');
+         var table = document.querySelector('#mytable tbody');
+         firebase.database().ref('adv').once('value',   function(snapshot) {
+         snapshot.forEach(function(childSnapshot) {
+         	var newrow=table.insertRow()
+         var childKey = childSnapshot.key;
+         var childData = childSnapshot.val();
+         newrow.insertCell().textContent=childData.id;
+       
+        newrow.insertCell().textContent=childData.lname;
+       
+         newrow.insertCell().innerHTML = '<a onClick="onDelete(this)" class="btn btn-success">update<i class="fas fa-times"></i></a>';
+    });
+          firebase.database().ref("adv").on("value", function(snapshot) {
+         var doo=document.querySelector('#id');
+         doo.setAttribute("value",snapshot.numChildren());
+  
+})
+  });
+         }
+function onDelete(td) {
+   if (confirm('are you sure to delate this data')) {
+      row = td.parentElement.parentElement;
+      var index = row.rowIndex-1;
+     var id=index+1;
+       
+          let userRef = firebase.database().ref('adv/' + id);
+          userRef.remove()
+      
+
+      document.getElementById("mytable").deleteRow(row.rowIndex);
+
+
+      alert("deleted successful ");
+   }
+
+}
+function search(){
+   var table = document.querySelector('#mytable tbody');
+   var dt=document.querySelector('#search').value;
+   var id=dt;
+    let userRef = firebase.database().ref('adv/' + id).once('value',   function(snapshot,id) {
+      id=dt;
+    
+            var newrow=table.insertRow()
+         
+         var childData = snapshot.val();
+    
+         
+            var newrow=table.insertRow();
+           newrow.insertCell().textContent=childData.id;
+      
+        newrow.insertCell().textContent=childData.lname;
+       
+         newrow.insertCell().innerHTML = '<a onClick="onDelete(this)" class="btn btn-success">update<i class="fas fa-times"></i></a>';
+  
+        });
+       
+}
+
+</script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <title>Firebase Image Upload using HTML and JavaScript</title>
+   <style>
+      #photo{
+         margin-top: 200px;
+         margin-left: 450px;
+      }
+      #upload{
+         margin-top: 20px;
+         margin-left: 450px;
+      }
+   </style>
+   <link rel="stylesheet" href= "css/bootstrap.min.css"/>
+   <link rel="stylesheet" href= "style.css"/>
+   <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+</head>
+<body onload="readOnceWithGet()">
+	<center>
+		<div class="container-sm" style="width: 50%;">
+  <div id="id01" class="modal container-sm shadow">
+
+
+			<form class="modal-content animate" action="" id="form" name="proform" >
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+				</div>
+
+
+				<div class="container-sm shadow p-2">
+					<p class="bg-success ">
+						program form
+					</p>
+               <input type="hidden" name="id" id="id" value="0">
+					
+					<label for="wday" class="form-label">advertasiment</label>
+					<input type="text" name="ln" id="ln" value="" class="form-control " />
+					
+
+					<button type="submit" style="width:60%" class="btn btn-primary " onclick="writeUserData()">save</button>
+
+				</div>
+			</form>
+
+
+		</div>
+       <button id="prog" onclick="document.getElementById('id01').style.display='block';" style="color:red;font-size:20px">&plus;
+
+		</button>
+      <input type="text" name="" id="search" class="form-control" style="width:20%">
+      <button onclick="search()">search</button>
+      
+
+   
+<table class="table table-hover table-striped" id="mytable" style="width: 400px;">
+	<th>id</th>
+	
+	<th>posts</th>
+	
+   <th>delete</th>
+	<tbody>
+		
+	</tbody>
+	
+
+
+</div></center>
+
+<script type="text/JavaScript">
+
+   
+   const firebaseConfig = {
+      apiKey: "AIzaSyCUyKCnYL8iRaR_rYEcf9lh_2prGWL8x_A",
+  authDomain: "realegalcho.firebaseapp.com",
+  projectId: "realegalcho",
+  storageBucket: "realegalcho.appspot.com",
+  messagingSenderId: "1073455577466",
+  appId: "1:1073455577466:web:7473332966c7026ecffec3",
+  measurementId: "G-2WP627XMXD"
+   };
+
+  
+   firebase.initializeApp(firebaseConfig);
+   
+function writeUserData(n, date) {
+	
+     
+       var id=document.querySelector('#id').value;
+  
+
+	var date=1;
+	
+    var ln = document.getElementById('ln').value;
+   
+  firebase.database().ref('adv/' + date).set({
+    id:date,
+   
+   
+    lname:ln,
+   
+   
+  });
+  document.getElementById('id01').style.display="none";
+  alert("sussfuly uploaded");
+
+}
+     
+         
+
+           function readOnceWithGet(data) {
+            
+         var ds = document.getElementById('ds');
+         var table = document.querySelector('#mytable tbody');
+         firebase.database().ref('adv').once('value',   function(snapshot) {
+         snapshot.forEach(function(childSnapshot) {
+         	var newrow=table.insertRow()
+         var childKey = childSnapshot.key;
+         var childData = childSnapshot.val();
+         newrow.insertCell().textContent=childData.id;
+       
+        newrow.insertCell().textContent=childData.lname;
+       
+         newrow.insertCell().innerHTML = '<a onClick="onDelete(this)" class="btn btn-success">update<i class="fas fa-times"></i></a>';
+    });
+          firebase.database().ref("adv").on("value", function(snapshot) {
+         var doo=document.querySelector('#id');
+         doo.setAttribute("value",snapshot.numChildren());
+  
+})
+  });
+         }
+function onDelete(td) {
+   if (confirm('are you sure to delate this data')) {
+      row = td.parentElement.parentElement;
+      var index = row.rowIndex-1;
+     var id=index+1;
+       
+          let userRef = firebase.database().ref('adv/' + id);
+          userRef.remove()
+      
+
+      document.getElementById("mytable").deleteRow(row.rowIndex);
+
+
+      alert("deleted successful ");
+   }
+
+}
+function search(){
+   var table = document.querySelector('#mytable tbody');
+   var dt=document.querySelector('#search').value;
+   var id=dt;
+    let userRef = firebase.database().ref('adv/' + id).once('value',   function(snapshot,id) {
+      id=dt;
+    
+            var newrow=table.insertRow()
+         
+         var childData = snapshot.val();
+    
+         
+            var newrow=table.insertRow();
+           newrow.insertCell().textContent=childData.id;
+      
+        newrow.insertCell().textContent=childData.lname;
+       
+         newrow.insertCell().innerHTML = '<a onClick="onDelete(this)" class="btn btn-success">update<i class="fas fa-times"></i></a>';
+  
+        });
+       
+}
+
+</script>
+</body>
+
+>>>>>>> 2738957 (six commit)

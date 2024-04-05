@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>.</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css\bootstrap.min.css">
+<link type="text/css" relrel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../home.css">
+
+ <script src="print.js"></script>
+<link rel="stylesheet" type="text/css" href="print.css">
+<link rel="stylesheet" type="text/css" href="tab.css">
+
+</style>
+
+<style type="text/css">
+	#myTable th,td{
+		width: 17%;
+	}
+</style>
+
+<body class="bg-success">
+
+
+<div class="container-sm bg-white ">
+	<div class="container-sm shadow bg-info">
+		<span id="hid1" class="lu" onclick="window.open('reg.html','_self')" style="color:red;font-size:30px;margin-left:10px">  <b>&larr;</b>
+        </span>
+		<span id="hid"  class="btn bg-white" onclick="exportTableToCSV('person.csv')" style="font-size:20px">Print </span>
+
+
+
+
+	<span id="hid2" class="btn btn-danger" onclick="dlt()" style="color:white;font-size:20px;">delete</span>
+
+	<span id="hid1" class="lu" onclick="document.getElementById('id01').style.display='block';" style="float:right;color:red;font-size:45px;margin-right:20px">&plus;
+		</span>
+			
+
+		<div id="myDropdown" class="dropdown-content">
+			
+			<a><span id="hid2" onclick="window.alert('this action can delete entairy table data permenently');dlt()" style="color:red;font-size:20px;width:48%">delete table</span></a>
+
+
+		</div>
+
+</div>
+
+<div class="container-sm shadow m-2 bg-success">
+	
+<table class="table table-sm table-condensed table-striped table-responsive table-hover bg-white "
+id="myTable">
+
+<thead>
+<th scope="col" id="no" onclick="no()"><input type="text" style="width:40px;display:none" id="noi"> No</th>
+
+<th scope="col" id="nn" ="fname()"><input type="text" style="width:40px;display:none" id="fnamei">firstname</th>
+<th scope="col">midlename</th>
+<th scope="col" id="mk1" onclick="mark1()">lastname<input type="text" id="mark1i" style="width: 40px;display: none"></th>
+
+<th scope="col" id="mark2"><input type="text" style="width:40px;display:none" id="mark2i">age</th>
+
+<th scope="col">gender</th>
+
+<th scope="col" id="mark4"><input type="text" style="width:40px;display:none" id="mark4i">update </th>
+
+
+<th scope="col" id="mark4"><input type="text" style="width:40px;display:none" id="mark4i">delete</th>
+
+</thead>
+<tbody style ="background-color:white">
+
+<input type="text" id="search" class="form-control bg-white" placeholder="@ search...." style="width:62%;color: black;"><span class="btn" onclick="document.getElementById('id07').style.display='block'" style="" type="submit">&#9757;<i>upload</i></span>
+
+</tbody>
+</table>
+</div>
+</div>
+<div id="id01" class="modal container-sm shadow">
+
+<form class="modal-content animate" action="" name="my-form" onsubmit="event.preventDefault();onformsubmit();">
+
+<div class="imgcontainer">
+<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="container-sm shadow p-2" style="">
+<p class="bg-success ">
+students registiration form
+</p>
+
+
+<input type="hidden" class=" form-control"placeholder=
+"" name="left" id="left" value="0">
+
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark1" id="mark1" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark2" id="mark2" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark3" id="mark3" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark4" id="mark4" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark5" id="mark5" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark6" id="mark6" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark7" id="mark7" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark8" id="mark8" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark9" id="mark9" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark10" id="mark10" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark11" id="mark11" value="0">
+<input type="hidden" class=" form-control"placeholder=
+"" name="mark12" id="mark12" value="0">
+<input type="hidden" name="av" id="" value="0" />
+
+
+<input type="hidden" name="no" id="no" value=""> <br>
+<input type="hidden" name="id" id="id" value="0"> <br>
+<label for="inputJK"class="form-label">first name</label><br>
+<input type="text" id="inputNL" name="firstname" class="form-control mb-2" placeholder="" style="width: 90%">
+<label for="inputJK"class="form-label">midle name</label><br>
+<input type="text" id="midle" name="midlename" class="form-control mb-2" placeholder="" style="width: 90%">
+
+<label for="inputNH" class="form-label">last name</label><br>
+
+<input type="text" id="inputNH" name="lastname" class="form-control mb-2" placeholder="" style="width:90%">
+
+
+<input type="hidden"class="form-control " id="inputJK" name="sid" style="width: 90%" value="0"> <br>
+
+<label for="inputA" class="form-label">age</label><br>
+<input type="number" id="inputA"   value="" name="age" class="form-control mb-2" placeholder="" style="width: 90%"><br>
+
+
+<label for="inputb" class="form-label">gender</label><br>
+<select name="gender" type="" id="gender" class="form-control">
+	<option>male</option>
+	<option>female</option>
+	<option>costom</option>
+</select>
+
+
+
+<button type="submit" >save</button>
+
+
+
+
+</div>
+</form>
+</div>
+<div id="id02" class="modal container-sm shadow">
+
+<form class="modal-content animate" action="" name="my-form" >
+<div class="imgcontainer">
+<span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+</div>
+
+
+<div class="container-sm shadow p-2">
+<p class="bg-success ">
+students registiration form
+</p>
+<input type="hidden" class="mark1 form-control"placeholder=
+"" name="mark1" id="mark1" value="0">
+<input type="hidden" class="mark2 form-control"placeholder=
+"" name="mark2" id="mark2" value="0">
+<input type="hidden" class="mark3 form-control"placeholder=
+"" name="mark3" id="mark3" value="0">
+<input type="hidden" class="mark4 form-control"placeholder=
+"" name="mark4" id="mark4" value="0">
+<input type="hidden" class="mark5 form-control"placeholder=
+"" name="mark5" id="mark5" value="0">
+<input type="hidden" class="mark6 form-control"placeholder=
+"" name="mark6" id="mark6" value="0">
+<input type="hidden" class="mark7 form-control"placeholder=
+"" name="mark7" id="mark7" value="0">
+<input type="hidden" class="mark8 form-control"placeholder=
+"" name="mark8" id="mark8" value="0">
+<input type="hidden" class="mark9 form-control"placeholder=
+"" name="mark9" id="mark9" value="0">
+<input type="hidden" class="mark10 form-control"placeholder=
+"" name="mark10" id="mark10" value="0">
+<input type="hidden" class="mark11 form-control"placeholder=
+"" name="mark11" id="mark11" value="0">
+<input type="hidden" class="mark12 form-control"placeholder=
+"" name="mark12" id="mark12" value="0">
+<input type="hidden" name="av" id="av" value="" />
+
+
+<input type="hidden" name="no"  id="no" value="0"> <br>
+<input type="hidden" name="id" id="id" class="id" value="0"> <br>
+<label for="inputJK"class="form-label">first name</label><br>
+<input type="text" id="fn" name="firstname" class="fnam form-control mb-2" placeholder="" style="width: 90%">
+<label for="inputJK"class="form-label">midle name</label><br>
+<input type="text" id="mid" name="midlename" class="mid form-control mb-2" placeholder="" style="width: 90%">
+
+
+<label for="inputNH" class="form-label">last name</label><br>
+
+<input type="text" id="ln" name="lastname" class="lnam form-control mb-2" placeholder="" style="width:90%">
+<label for="inputJK"class=" form-label">student id</label><br>
+
+
+
+<input type="text"class="sid form-control " id="sid" name="sid" style="width: 90%"> <br>
+
+<label for="inputA" class="form-label">age</label><br>
+<input type="number" id="ag" value="" name="age" class="ag form-control mb-2" placeholder="" style="width: 90%"><br>
+
+
+<label for="inputb" class="form-label">gender</label><br>
+<select name="gender" id="gen" class="sex form-control">
+	<option>male</option>
+	<option>female</option>
+	<option>costom</option>
+</select>
+
+
+
+<button type="submit" id="sup">save</button>
+
+
+
+</div>
+</form>
+</div>
+			<div id="id07" class="modal container-sm shadow">
+			<form class="modal-content animate" action="" id="myForm1">
+					<span onclick="document.getElementById('id07').style.display ='none'" style ="float:right;">X</span>
+	
+					<div style="width:90%;margin:20px;padding:10px">
+					<span style="">choose filename.csv file format to backup</span>
+					<br><br><br>
+					<input type="file" class ="form-control " style="" id="csvFile" accept=".csv" />
+					<br /><br>
+					<input type="submit" style =""class ="btn btn-success "value="Submit" onclick="regupload()" />
+</div>
+				</form>
+			</div>
+			<div id="id08" class="modal container-sm shadow">
+<div class="modal-content animate" action="" id="" style="padding:20px" >
+<span class="text-success ">you are register your students successful</span>
+<button type="" onclick="success()" class="btn text-success">ok</button>
+</div>
+</div>
+<script src="../csv.js"></script>
+<script type="text/javascript" src="st9.js">
+
+
+</script>
+  <script>
+
+</script>
+</body>
+</html>

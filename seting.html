@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>.</title>
+	<style>
+body{
+	background-color: green;
+}.main{
+	background-color: white;
+}
+.back{
+	background-color: green;
+}input{
+    font-size:50px;
+}
+.main{
+    width:80%;
+
+    
+}
+.main{
+    width:60%;
+
+}
+
+	</style>
+	<!--	<link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+
+	-->
+			<link rel="stylesheet" href="home.css">
+
+</head>
+
+<body >
+   
+    <center>
+        
+<div class="main" style="">
+    
+  
+        
+<div class="main" style="width: 80%;">
+
+	<div class=" bg-white">
+		<span id="hid1" class="lu" onclick="window.open('home.html','_self')" style="color:red;margin-left:0px;w"> <b>&#127968;</b>
+        </span>
+	<span class="btn btn-success " style="width:100%;background-color:white">App settings</span>
+</div>
+
+
+
+
+	<label class="switch">
+		<input type="checkbox" unchecked id="theme">
+		<div class="slider round"></div>
+	</label><br>
+
+
+	<fieldset style="border:1px solid black">
+		<legend>add/remove login page</legend>
+		<label for="" class="form-label" id="show">show login ppage</label>		&nbsp;&nbsp;
+
+		<input type="radio" style="width:50px;height:50px;border:2px solid black" class="form-control" name="ads" id="ad" value="1" /><br />
+		<label for="" class="form-label" id="remove">Remove login page</label>
+		<input type="radio" style="width:50px;height:50px"  class="form-control" name="ads" id="ad" value="2" /><br />
+		<button class="btn btn-success" type="submit" style ="width :100%"onclick="settingsave()">save</button>
+
+		
+	</fieldset>
+
+
+	<p>
+		clear all data permanently:
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<button type="" style =""onclick=" reset()" class="btn btn-success">reset</button>
+		<p>
+			change your password and username:
+
+			<button type="" style="" onclick="change()" class="btn btn-success">change</button>
+		<p>
+			
+
+
+
+			<div id="id02" class="modal container-sm shadow" style="display: none;">
+
+				<form class="modal-content animate" action="" id="form" name="my-form1">
+					<div class="imgcontainer">
+						<span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+					</div>
+
+
+					<div class="container-sm shadow p-2">
+						<p class="bg-success ">
+							room registration form
+						</p>
+						<input type="hidden" name="no" id="no" value="" />
+
+
+
+						<label class="form-label"><b>username </b></label>
+						<input type="text" class="form-control" name="un" id="un">
+
+						<label class="form-label"><b>password </b></label>
+						<input type="text" class="form-control" name="pas" id="pas">
+
+
+						<button type="submit" id="sup" style="width:60%" class="btn btn-primary ">save</button>
+
+					</div>
+				</form>
+			</div>
+
+			<label class="switch">
+				<input type="checkbox" id="rch">
+				<div class="slider"></div>
+			</label>
+
+			<label class="switch">
+				<input type="checkbox" checked>
+				<div class="slider"></div>
+			</label><br><br>
+
+
+
+
+		</p>
+		</div></center>
+		<script src="main.js">
+
+		</script>
+	</body>
+</html>

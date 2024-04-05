@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>.</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css\bootstrap.min.css">
+<link type="text/css" relrel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../home.css">
+
+
+</style>
+<style type="text/css" media="all">
+	table{
+		
+		
+	}
+	table{
+		background-color: white;
+	}
+	#myTable th{
+width: 17%;
+	}
+</style>
+<body class="bg-success" onload="body()">
+
+
+<div class="container-sm bg-white ">
+	<div class="container-sm shadow bg-info">
+		<span id="hid1" class="lu" onclick="window.open('subj.html','_self')" style="color:red;font-size:30px;margin-left:10px;width:48%">  <b>&larr;</b>
+        </span>
+<span></span>
+
+			<span id="hid"  class="btn bg-white" onclick="exportTableToCSV('person.csv')" style="font-size:20px">Print </span>
+	<!--<span id="hid2" class="btn btn-danger" onclick="dlt()" style="color:white;font-size:20px;">welcome</span>
+-->
+		<div id="myDropdown" class="dropdown-content">
+			
+			<a><span id="hid2" onclick="window.alert('this action can delete entairy table data permenently');dlt()" style="color:red;font-size:20px;width:48%">delete table</span></a>
+
+
+		</div>
+
+</div>
+
+<div class="container-sm shadow m-2 bg-success">
+	<span></span><input type="text" id="search" class="form-control" placeholder="@ search....">
+</span>
+		<!--<span onclick="reg();" class="btn bg-danger m-4" style="color:white;float:right">&plus;</span>
+-->
+
+<table class="table table-sm table-condensed table-striped table-responsive table-hover bg-white "
+id="myTable">
+
+<thead>
+<th scope="col" id="no" onclick="no()"><input type="text" style="width:40px;display:none" id="noi"> No</th>
+
+<th scope="col" id="nn" onclick="fname()"><input type="text" style="width:40px;display:none" id="fname">fname</th>
+
+<th scope="col" id="mk1" onclick="mark1()">lname<input type="text" id="mark1i" style="width: 40px;display: none;"></th>
+<th scope="col" id="lnamke" onclick="lname()"><input type="text" style="width:40px;display:none" id="lnamei">sid</th>
+
+<!--<th scope="col" id="mark3"><input type="text" style="width:40px;display:none" id="mark3i">gender </th>-->
+<th scope="col" id="mark3"><input type="text" style="width:40px;display:none" id="mark3i">nab</th>
+<th scope="col" id="mark4"><input type="text" style="width:40px;display:none" id="mark4i">status</th>
+
+
+
+<th scope="col" id="mark4"><input type="text" style="width:40px;display:none" id="mark4i">update </th>
+<th scope="col">details</th>
+
+
+
+</thead>
+<tbody>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="id02" class="modal container-sm shadow">
+
+<form class="modal-content animate" action="" name="my-form" >
+<div class="imgcontainer">
+<span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+</div>
+
+
+<div class="container-sm shadow p-2">
+<p class="bg-success ">
+update atendance form
+</p>
+
+
+<label for="inputJK"class="form-label" style="width:90%">number of absent date</label><br>
+
+<input type="number" class="id form-control" name="id" id="id" value="0" style="width:90%"> <br>
+
+
+<button type="submit" id="sup">save</button>
+
+
+
+</div>
+</form>
+</div>
+<div id="id03" class="modal container-sm shadow" style ="display:nonew">
+
+  <div class="modal-content animate" action="" id="form" name="my-form1" >
+
+
+<div class ="card">
+    <span onclick="document.getElementById('id03').style.display='none';window.location.reload()"class="close" title="Close Modal"> &times;</span>
+<div class ="card-header">
+    <span>List of date <span id="stm"></span> not attended class</span>
+</div>
+    <div class ="card-body">
+        <span id="datl"></span>
+</div>
+  </div>
+  <script src="../csv.js"></script>
+<script type="text/javascript" src="a2.js">
+
+
+</script>
+</body>
+</html>

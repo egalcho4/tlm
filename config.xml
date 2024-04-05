@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.teacherloadminimizer.egalcho" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TLM</name>
+    <description>
+  this is how we help teacher
+    </description>
+    <author email="egalcho1@gmail.com" href="">
+       
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <plugin name="cordova-plugin-camera" spec="~5.0.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="~6.0.0" />
+	
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <!--
+            ldpi    : 36x36 px
+            mdpi    : 48x48 px
+            hdpi    : 72x72 px
+            xhdpi   : 96x96 px
+            xxhdpi  : 144x144 px
+            xxxhdpi : 192x192 px
+        <icon src="res/android/ldpi.png" density="ldpi" />
+        <icon src="res/android/mdpi.png" density="mdpi" />
+        <icon src="res/android/hdpi.png" density="hdpi" />
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
+        -->
+       
+
+        <icon src="www/icons/c.png" density="ldpi" />       
+        
+        
+
+        <!-- for splash
+            ldpi    : portrait 200x320 px, landscape 320x200 px
+            mdpi    : portrait 320x480 px, landscape 480x320 px
+            hdpi    : portrait 480x800 px, landscape 800x480 px
+            xhdpi   : portrait 720x1280 px, landscape 1280x720 px
+            xxhdpi  : portrait 960x1200 px, landscape 1200x960 px
+            xxxhdpi : portrait 1280x1920 px, landscape 1920x1280 px
+       -->
+        
+
+          <splash src="www/splash/mnl.png" density="port-mdpi" /> 
+       
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

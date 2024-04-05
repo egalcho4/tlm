@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>.</title>
+
+	<link rel="stylesheet" href="animate.css" title="" type="" />
+
+	<link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+
+</head>
+<style type="text/css" media="all">
+	#load {
+		animation-name: load;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+	}
+@keyframes load {
+		from {
+			font-size: 15px;
+		}
+
+		to {
+			font-size: 30px;
+		}
+	}
+</style>
+<body id="bd" class=" bg-success">
+
+	<div class="login bg-success" id="lhome" style="display:none">
+
+
+		
+
+		<br />
+
+	<center>
+	<div class="login bg-success" id="lhome" style="width:560px">
+
+		<div class="btn btn-secondary " id="b" style="margin-top:0px">
+</div>
+		
+
+		<br />
+
+		<center>
+			
+				<span id="onl"></span></center>
+		<div id="card bg-white">
+			<div class="card-body">
+
+
+
+				<div class="container-sm shadow-lg m-10" style="margin:10%;">
+
+
+					<center><fieldset>
+
+						<legend><b class=" bg-danger " style="margin-top:20px">login page</b></legend></center>
+						<span id="demo" style="color:red;margin:0% 20% ;display:none" class=" btn   bg-white"></span>
+
+						<center>
+							<div class="container-sm shadow bg-white m-3">
+
+
+
+
+
+
+								<label for="inputJK"class="form-label">password</label><br>
+								<input type="password" class="pssr" style="width:150px;border-radius:30px" id="pssr" name="pssr">
+
+
+								<button type="submit" class="btn btn-secondary " onclick="onlogin();">login</button><br>
+
+
+								<br>
+
+<marquee id="mq" style="display:none;color:red">open data or wifi to get more  </marquee>
+							</div>
+
+								<center>
+<marquee id="mq" style="display:none;color:red">open data or wifi to get more information </marquee>
+						</center>	</div>
+
+							<button class="btn btn-primary " style="padding-buttom:10px"><a href="reg.html" style="color:white">register</a></button>
+
+
+
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<center>
+				<div class="card" style="width:250px;max-height :200px;overflow-y auto;">
+					<div class="card-body" style="max-height:200px;overflow-y:auto">
+						<span id="text1"></span>
+					</div>
+<a href="" target="_self" class="btn btn-primary" id="vs">Click Me🙏</a>
+				</div>
+			</div>
+		</center>
+		<div class="solar" id="solar" style="width:100%;margin-top:150px">
+
+		<center>
+		<div class="solar" id="solar" style="width:560px;margin-top:150px">
+
+			<div class="container-sm bg-success " id="cont">
+				<center>
+					<div class="card" id="card" style="margin-top:150px">
+
+						<div class="card-header">
+
+							<div class="card-body" style="min-height:100px">
+								<span id="offline"> </span>
+								<div id="myProgress">
+									<div id="myBar"></div>
+								</div>
+							</div>
+							<h1 id="load">Loading... </h1><h1>TLM</h1>
+							<ii>Stay back safely ,leave everything for us👍</ii>
+
+						</div>
+					</div>
+					<input type="radio" name="dat" id="1" checked="true" />
+					<input type="radio" name="dat" id="2" />
+					<input type="radio" name="dat" id="3" />
+<br />&copy; egalcho 02/2022
+<br />
+<br />
+<br />
+<br />
+	<b style=" margin-buttom:20px ">	Pawored by @egalcho</b>
+				</center>
+			</div>
+		</div>
+
+	</center><center>
+		<div id="id06" class="modal container-sm shadow-lg bg-white" style="width:300px;height :300px; margin :100px 30px;border-radius:20px">
+	
+			<div class=" modal-content animate" action="" name="" style="">
+	
+				
+				<div class="" style="min-height:250px;max-height:250px;min-width:300px;max-width:300px;overflow-y:auto;overflow-x:auto">
+					<span id="h8"></span>
+				</div>
+
+
+			</div>
+				<a href="#" class="btn btn-primary" id="linkme" target="_self" style="width:100%">Get app</a>
+		</div>
+	</center>
+
+	<!-- Project -->
+	<script src="server.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="jquery.js">
+
+	</script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+	<script>
+		/*function checker(){
+		if(navigator.onLine){
+			window.location.reload()
+		}else{
+		}
+	}
+var room=setInterval(function(){
+		checker()
+	},100)
+	*/
+		if (navigator.onLine) {
+			var bm = document.getElementById('onl');
+			bm.innerHTML = "You are onLine"
+			bm.style.backgroundColor = "green";
+
+			const firebaseConfig = {
+				apiKey: "AIzaSyCB1m-gW2sQ9UJUcIVbHCxlhTM3PV3EKWE",
+				authDomain: "tlmcontrol.firebaseapp.com",
+				databaseURL: "https://tlmcontrol-default-rtdb.firebaseio.com",
+				projectId: "tlmcontrol",
+				storageBucket: "tlmcontrol.appspot.com",
+				messagingSenderId: "73255601994",
+				appId: "1:73255601994:web:67f328248fa1a4bf56a3b3",
+				measurementId: "G-5HYGGTKZJ8"
+
+			}
+			firebase.initializeApp(firebaseConfig);
+
+
+			function readOnceWithGet(data) {
+				//clearInterval(room)
+				//const table=document.querySelector('#mytabl');
+				firebase.database().ref('Adv').once('value', function(snapshot) {
+					snapshot.forEach(function(childSnapshot) {
+
+
+						var childData = childSnapshot.val();
+
+						console.log(childData)
+						if (childData == 1) {
+							document.getElementById('id06').style.display = "block";
+						}
+						//table.innerHTML=childData.lname+": posted by admin ";
+
+
+					});
+
+				});
+				firebase.database().ref('vert').once('value', function(snapshot) {
+					snapshot.forEach(function(childSnapshot) {
+
+
+						var childData = childSnapshot.val();
+						function mova() {
+				var elem = document.getElementById("h8");
+				var elema = document.getElementById("h8");
+			
+				var i = -1;
+				var txt = childData+"\n from admin to update your app";//"WELCOME TO TEACHER LOAD MINIMIZER APP SOLUTION ,\n THIS APP WAS DEVELOPED TO HELP TEACHER TO MANAGE HIS STUDENTS BY EASY MANNER  PLEASE NOT THAT DON'T UNINSTALL APP WHILE START TO USE THIS MAY REMOVE ALL YOUR DATA,\n open your data for more information ";
+				var text=childData+"\n from admin"
+				var id = setInterval(frame, 100);
+				var ida = setInterval(framea, 100);
+			
+				function frame() {
+					if (i == txt.length-1) {
+						clearInterval(id);
+					} else {
+						i++;
+						//console.log(i)
+						elem.innerHTML += txt[i];
+					}
+				}
+				function framea() {
+					if (i == text.length-1) {
+						clearInterval(ida);
+					} else {
+						i++;
+						//console.log(i)
+						elema.innerHTML += text[i];
+					}
+				}
+			}
+			setTimeout(mova(), 4000);
+						document.getElementById('h8').innerHTML = childData+"\n from admin to update your app";
+						document.getElementById('text1').innerHTML = childData+"\n from admin";
+
+						//console.log(childData)
+						//table.innerHTML=childData.lname+": posted by admin ";
+
+
+					});
+
+				});
+				firebase.database().ref('link').once('value', function(snapshot) {
+					snapshot.forEach(function(childSnapshot) {
+
+
+						var childData = childSnapshot.val();
+					var lk=	document.getElementById('linkme');//.innerHTML = childData+"\n from admin to update your app";
+						lk.setAttribute("href",childData);
+						var vs=	document.getElementById('vs');//.innerHTML = childData+"\n from admin to update your app";
+						vs.setAttribute("href",childData);
+					
+						//document.getElementById('text1').innerHTML = childData+"\n from admin";
+
+						//console.log(childData)
+						//table.innerHTML=childData.lname+": posted by admin ";
+
+
+					});
+
+				});
+			}
+
+			setTimeout(function() {
+				readOnceWithGet()
+			}, 1000)
+		} else {
+			function mova() {
+				var elem = document.getElementById("text1");
+				var i = -1;
+				var txt = "WELCOME TO TEACHER LOAD MINIMIZER APP SOLUTION ,\n THIS APP WAS DEVELOPED TO HELP TEACHER TO MANAGE HIS STUDENTS BY EASY MANNER  PLEASE NOT THAT DON'T UNINSTALL APP WHILE START TO USE THIS MAY REMOVE ALL YOUR DATA,\n open your data for more information ";
+				var id = setInterval(frame, 100);
+				function frame() {
+					if (i == txt.length-1) {
+						clearInterval(id);
+					} else {
+						i++;
+						//console.log(i)
+						elem.innerHTML += txt[i];
+					}
+				}
+			}
+			setTimeout(mova(), 4000);
+			//console.log("offline ")
+			var mq = document.getElementById('mq');
+			mq.style.display="block";
+		
+			var bm = document.getElementById('onl');
+			bm.innerHTML = "You are offline"
+		}bm.style.backgroundColor = "yellow";
+		var sol = setInterval(function() {
+			var solar = document.getElementById('solar');
+			var lhome = document.getElementById('lhome');
+			lhome.style.display = "none";
+			//frameLooper();
+
+		}, 0)
+		var lhom = setInterval(function() {
+			clearInterval(sol);
+			var solar = document.getElementById('solar');
+			var lhome = document.getElementById('lhome');
+			solar.style.display = "none";
+
+			lhome.style.display = "block";
+			var nam = localStorage.getItem("login");
+			if (parseInt(nam) == 2) {
+
+				window.open("home.html", '_self');
+			}
+		}, 5000)
+
+		
+
+
+
+
+		var nam = localStorage.getItem("login");
+
+		$(function include() {
+			if (parseInt(nam) == 2) {
+				$("#includedContent").load("home.html");
+
+			}
+		});
+
+
+
+
+
+
+		function move() {
+			var elem = document.getElementById("myBar");
+			var width = 1;
+			var id = setInterval(frame,
+				10);
+			function frame() {
+				if (width >= 100) {
+					clearInterval(id);
+				} else {
+					width++;
+					elem.style.width = width + '%';
+					elem.innerHTML = width+"%";
+				}
+			}
+		}
+
+
+
+		setTimeout(move(), 50);
+
+
+
+
+
+		function movo() {
+			var elem = document.getElementById("text2");
+			var i = -1;
+			var txt = "Elias Galcho (@egalcho)";
+			var id = setInterval(frame, 50);
+			function frame() {
+				if (i == txt.length-1) {
+					clearInterval(id);
+				} else {
+					i++;
+					//console.log(i)
+					elem.innerHTML += txt[i];
+				}
+			}
+		}
+		setTimeout(movo(), 1000);
+		var elem = document.getElementsByName("dat");
+		var j = 0;
+		setInterval(function() {
+
+
+
+			if (j >= 0 && j <= 3) {
+				j++;
+
+				var rad = document.getElementById(j);
+				rad.setAttribute("checked", "true")
+				if (j >= 3) {
+					//rad/.refresh()
+				}
+			}
+
+		}, 200)
+		setInterval(function() {
+			document.getElementById('offline').innerHTML = "Please be offline";
+		}, 8000)
+	</script>
+</script>
+</body>
+</html>

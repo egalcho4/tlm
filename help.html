@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="home.css" />
+
+  <body class="bg-success">
+    <div class="container-sm">
+      <div class="row">
+        <div class="col-6">
+          <center>
+            <div class="btn btn-warning" style="width: 100%">
+              For More Information
+            </div>
+            <br />
+            <a
+              href="reg/about.html"
+              style="text-decoration: none; color: black">
+              <div class="card" style="width: 80%">
+                <div class="card-body">
+                  <img
+                    src="m.jpeg"
+                    alt=""
+                    style="
+                      width: 50px;
+                      height: 50px;
+                      border-radius: 50%;
+                    " />About Us
+                </div>
+              </div></a
+            >
+            <br />
+            <a href="wus.html" style="text-decoration: none; color: black">
+              <div class="card" style="width: 80%">
+                <div class="card-body">Documentation</div>
+              </div></a
+            >
+          </center>
+        </div>
+        <div class="col-6">
+          <center>
+            <div class="card" style="width: 560px; top: 0; padding: 20px">
+              <div class="card-header">
+                <span
+                  onclick="window.open('home.html','_self')"
+                  class="btn btn-info"
+                  >< back</span
+                >
+                <span class="btn btn-warning" style="width: 50%"
+                  >what's up?</span
+                >
+              </div>
+              <div
+                class="card-body"
+                style="
+                  overflow: auto;
+                  max-height: 300px;
+                  min-height: 300px;
+                  max-width: 500px;
+                  outline: 2px outset black;
+                  border: 2px inset black;
+                  background-color: white;
+                  border-radius: 10px;
+                ">
+                <div class="row">
+                  <!--<div class="col-6">-->
+                  <div class="" id="ans" style="align-items: self-end"></div>
+                </div>
+                <div class="row">
+                  <div id="tyev" style="display: none; margin-left: 100px">
+                    <center>
+                      <span id="ttext">typing</span>
+                      <span id="typ">.</span>
+                      <span id="typ1">.</span>
+                      <span id="typ2">.</span>
+                    </center>
+                  </div>
+                  <!--</div>-->
+                </div>
+              </div>
+              <div class="card-footer">
+                <form
+                  class=""
+                  action=""
+                  method="get"
+                  accept-charset="utf-8"
+                  name="helpform">
+                  <input type="hidden" name="anser" id="anser" />
+                  <textarea
+                    name="quest"
+                    id="inph"
+                    rows="2"
+                    placeholder="Ansk samething.."
+                    style="width: 100%"></textarea>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    onclick="getanswer()">
+                    send</button
+                  ><button class="btn btn-danger" onclick="removeitem()">
+                    reset mesage
+                  </button>
+                </form>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      // Define the URL of the PDF file
+      var pdfUrl =
+        "https://drive.google.com/file/d/1Jf_5JLnwmnthEQbHfiEbCKyQAQRUIxmt/view?usp=sharing";
+
+      // Function to trigger the download
+      function downloadPdf() {
+        fetch(pdfUrl)
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Create a blob URL for the PDF data
+            var url = window.URL.createObjectURL(blob);
+
+            // Create a link element to trigger the download
+            var a = document.createElement("a");
+            a.href = url;
+
+            a.download = "TLM.apk"; // Set the desired file name
+            document.body.appendChild(a);
+
+            // Trigger a click event on the link element to initiate the download
+            a.click();
+
+            // Clean up by revoking the blob URL and removing the link element
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+          })
+          .catch((error) => {
+            console.error("Failed to download the PDF file: ", error);
+          });
+      }
+
+      // Call the downloadPdf() function when needed, e.g., in response to a button click
+      document
+        .getElementById("downloadButton")
+        .addEventListener("click", downloadPdf);
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      // Define the URL of the PDF file
+      var pdfUrl =
+        "https://drive.google.com/file/d/1NeaEqWw0mL1cBfh9tOjFtsJXERtEMNNm/view?usp=sharing";
+
+      // Function to trigger the download
+      function downloadPdf() {
+        fetch(pdfUrl)
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Create a blob URL for the PDF data
+            var url = window.URL.createObjectURL(blob);
+
+            // Create a link element to trigger the download
+            var a = document.createElement("a");
+            a.href = url;
+
+            a.download = "TLM_WIN_64.exe"; // Set the desired file name
+            document.body.appendChild(a);
+
+            // Trigger a click event on the link element to initiate the download
+            a.click();
+
+            // Clean up by revoking the blob URL and removing the link element
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+          })
+          .catch((error) => {
+            console.error("Failed to download the PDF file: ", error);
+          });
+      }
+
+      // Call the downloadPdf() function when needed, e.g., in response to a button click
+      document
+        .getElementById("downloadButton2")
+        .addEventListener("click", downloadPdf);
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      // Define the URL of the PDF file
+      var pdfUrl =
+        "https://drive.google.com/file/d/1ya21wBRiGq15ndT6W3rzawaxqCb5eaRh/view?usp=sharing";
+
+      // Function to trigger the download
+      function downloadPdf() {
+        fetch(pdfUrl)
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Create a blob URL for the PDF data
+            var url = window.URL.createObjectURL(blob);
+
+            // Create a link element to trigger the download
+            var a = document.createElement("a");
+            a.href = url;
+
+            a.download = "TLM_WIN_32.exe"; // Set the desired file name
+            document.body.appendChild(a);
+
+            // Trigger a click event on the link element to initiate the download
+            a.click();
+
+            // Clean up by revoking the blob URL and removing the link element
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+          })
+          .catch((error) => {
+            console.error("Failed to download the PDF file: ", error);
+          });
+      }
+
+      // Call the downloadPdf() function when needed, e.g., in response to a button click
+      document
+        .getElementById("downloadButton1")
+        .addEventListener("click", downloadPdf);
+    </script>
+    <script type="text/javascript">
+      const dararr = JSON.parse(localStorage.getItem("quest1") || "[]"),
+        helpform = document.forms["helpform"];
+      var ans = document.getElementById("ans");
+      var ans1 = document.getElementById("ans1");
+      var typ = document.getElementById("typ");
+      var inph = document.getElementById("inph");
+      function removeitem() {
+        localStorage.removeItem("quest1");
+      }
+      inph.addEventListener("keyup", () => {
+        var n = document.getElementById("tyev");
+        n.style.display = "block";
+      });
+      //setInterval(function(){
+      dararr.forEach((row) => {
+        var ul = document.createElement("ul");
+        ul.style.listStyleType = "none";
+        var ul1 = document.createElement("ul");
+        ul1.style.listStyleType = "none";
+        var left = document.createElement("li");
+        left.setAttribute("class", "");
+        left.style.borderRadius = "20px";
+        left.style.width = "300px";
+        left.style.marginLeft = "20px";
+        left.style.color = "blue";
+
+        left.innerHTML = row.quest + "<br><hr style='width:100%;height:10px'>";
+        var right = document.createElement("li");
+        right.setAttribute("class", "");
+        right.style.borderRadius = "20px";
+
+        right.style.marginLeft = "10px";
+        right.style.color = "green";
+        right.innerHTML = row.anser + "<br><hr style='width:100%;height:10px'>";
+
+        ul.append(left);
+
+        ul.append(right);
+        ans.appendChild(ul);
+        //ans.appendChild(ul1)
+      });
+
+      //},1000)
+
+      function getanswer() {
+        var inph = document.getElementById("inph").value;
+        var anser = document.getElementById("anser");
+
+        if (inph == "help") {
+          var an =
+            "how to ask questions?<br> how i backup data<br> how i get fist name,last name and sum to give to home room teacher<br> how i take student ";
+          anser.setAttribute("value", an);
+        } else if (inph == "how i backup data") {
+          var an =
+            "First you need to have file which are exported/printed from tlm or file which end with filename.csv and be sure the header are listed like this no,firstname,midlename,lastname,gender,age etc and then click on upload and choose your file final click ok button ";
+
+          anser.setAttribute("value", an);
+        } else if (
+          inph ==
+          "how i get fist name,last name and sum to give to home room teacher"
+        ) {
+          var an =
+            "Goto the section you need to get report at top right side click on more then select report after report interface displayed enter 0 and click check button";
+          anser.setAttribute("value", an);
+        } else if (inph == "how i get complite student") {
+          var an =
+            "to get complite student you need to click on more button then click on report button then enter number of asissment you examine student then mark on complite under print button then click check button you get complite student";
+          anser.setAttribute("value", an);
+        } else if (inph == "how i change my password") {
+          var an =
+            "to change password you have to remember your username and then click register button then then fill the form after clicking submit button system asks you to enter your username your username is used for verification purpose";
+          anser.setAttribute("value", an);
+        } else if (inph == "how i create section") {
+          var an =
+            " click on registration button then click on plus sign then fill form and save to add student in that section click on arrow bellow view header ";
+          anser.setAttribute("value", an);
+        } else if (
+          inph == "how i increase or decrease numbers of assissment "
+        ) {
+          var an =
+            " Click on more button then click on exam number/subject number and choose upto 12 ";
+          anser.setAttribute("value", an);
+        } else {
+          var an = "samething want wrong";
+          anser.setAttribute("value", an);
+        }
+        setanser();
+      }
+      function setanser() {
+        dararr.push(Object.fromEntries(new FormData(helpform).entries()));
+        localStorage.setItem("quest1", JSON.stringify(dararr));
+      }
+    </script>
+  </body>
+</html>

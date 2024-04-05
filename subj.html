@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>.</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" title="" type="" />
+	<link rel="stylesheet" href="rank.css" title="" type="" />
+	<link rel="stylesheet" href="home.css" title="" type="" />
+	<link rel="stylesheet" href="animate.css" title="" type="" />
+
+</head>
+<style>
+.repot #th{
+	width: 20%;
+}
+	#cont {
+		width: 100%;
+		
+	}
+
+	
+
+	#id01 input,label,button {
+
+	
+}.repot tr{
+
+}#repot td{
+	
+}
+	#cont {
+		width: 100%;
+		
+	}
+
+	#mad {
+		
+	}
+
+	.lud {
+		
+	}
+
+	#bd {
+		
+	}
+
+	#id01 input,label,button {
+		
+
+	}
+
+	#id02 input,label,button {
+		
+	}
+
+	
+
+	
+	#myTable tr td{
+               
+                width: 19.2%;
+
+            }
+            .loader {
+  border: 25px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 25px solid #48d1cc;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear
+  infinite;
+
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% {-webkit-transform: rotate(0deg);}
+  100% { -webkit-transform:
+  rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<body class="bg-success ">
+
+	<span id="hid1" class="lu" onclick="window.open('home.html','_self')" style="color:red;margin-left:100px;width:48%"> <b>&#127968;</b>
+
+	
+	</span>
+	<div class="container-sm shadow m-2 bg-white" id="cont">
+		<!--  <span class ="btn bg-warning" style ="font-size:50px">
+								           <span id="hid1" class="lu" onclick="window.open('home.html','_self')" style="color:red;font-size:80px;margin-left:10px;width:48%"> <b>&larr;</b>
+								        </span>
+								        <b id="b">bellow there are the list of section that you added to manage and click on open to navigate or click on plus sign to add new
+								      </b><br> <button onclick="add()" id="mad" style="width:50%; color:red">&plus;</button>
+								         </span> -->
+
+
+		<table id="myTable" class="table table-sm table-responsive table-striped table-hover" style="max-height:100%;min-height:100%">
+
+	
+			<thead>
+				<th scope="col">No</th>
+
+				<th scope="col">grade</th>
+				<th scope="col">section </th>
+				<th scope="col">subject </th>
+				<th scope="col">View</th>
+
+				<th scope="col">Report</th>
+
+			</thead>
+
+			<tbody>
+
+			</tbody>
+
+		</table>
+
+	</div>
+	<div id="id03" class="modal container-sm shadow">
+
+<div class="modal-content animate" action="" id="form" name="my-form">
+<span id="warn"></span>
+ <a target="_blank" class="btn btn-primary" href="https://www.telegram.org/@egalcho">Telegram </a></b></b>:
+     
+</div>
+</div>
+	<div id="id01" class="modal container-sm shadow">
+
+		<form class="modal-content animate" action="" id="form" name="my-form" onsubmit="event.preventDefault();form();">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+			</div>
+
+
+			<div class="container-sm shadow p-2">
+				<p class="bg-success ">
+					room registration form
+				</p>
+				<input type="hidden" name="no" id="no" value="" />
+
+
+				<label class="form-label"><b>grade</b></label>
+				<input type="text" class="form-control" name="gr" id="gr">
+
+				<label class="form-label"><b>section </b></label>
+				<input type="text" class="form-control" name="sec" id="section">
+
+				<label class="form-label"><b>subject </b></label>
+				<input type="text" class="form-control" name="sub" id="subject">
+
+				<button type="submit" style="width:60%;" class="btn btn-primary ">save</button>
+
+			</div>
+		</form>
+	</div>
+
+	<div id="id02" class="modal container-sm shadow">
+
+		<form class="modal-content animate" action="" id="form" name="my-form1">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+			</div>
+
+
+			<div class="container-sm shadow p-2">
+				<p class="bg-success ">
+					room registration form
+				</p>
+				<input type="hidden" name="no" id="no" value="" />
+
+
+
+				<label class="form-label"><b>grade</b></label>
+				<input type="text" class="name form-control" name="gr" id="name">
+
+				<label class="form-label"><b>section </b></label>
+				<input type="text" class="sec form-control" name="sec" id="sec">
+
+				<label class="form-label"><b>subject </b></label>
+				<input type="text" class="sub form-control" name="sub" id="sub">
+
+				<button type="submit" id="sup" style="width:60%;font-size:70px" class="btn btn-primary ">save</button>
+
+			</div>
+		</form>
+	</div>
+		<div id="id04" class="modal container-sm shadow">
+
+		<div class="modal-content animate" action="" id="form" name="my-form1">
+	<div class="card">
+		<div class="card-header">
+				<span onclick="document.getElementById('id03').style.display='none';window.location.reload()" style="float:right">x</span>
+		
+			<button type="submit" class="" id="geno" onclick="geno()" style="display:none;">general</button> <button type="submit" class="" id="spo" onclick="spo()" style="">specific</button>
+		
+		</div>
+		<div class="card-body">
+			<div class="" style="display:none" id="spec">
+	
+				
+							<div class="container" style="">
+				<fieldset style="border:2px solid black;">
+					<legend style="">Report within Given Value</legend>
+					<div class="card">
+						
+					<div class="card-body">
+						
+					
+					<label class="form-label " style="">Enter max value</label>
+					<input type="number" class="form-control " placeholder="enter max"style="" id="max1">
+					<label class="form-label " style="">Enter min value</label>
+					<input type="number" class="form-control " placeholder="enter min"style=""id="min1">
+					<button cl="btn btn-primary " style="width:100%;" onclick="" id="checkma">Check</button>
+				</div></div>
+				</fieldset>
+			</div>
+				<div class="" id="loader" style="display:none">
+			<center >
+				<div class="loader">
+
+			</div>
+		<span id="" style="">	Generating <span id="do1">.</span><span id="do2">.</span><span id="ido3">.</span>
+		</span>	</center>
+
+		</div>
+		<center>
+							<div class="" id="prove" style="display:none">
+				<table border="2" id="repot" class="repot">
+				<thead>
+					<th id="th">No</th>
+					<th id="th">between</th>
+					<th id="th">male</th>
+						<th id="th">Female</th>
+						<th id="th">Total</th>
+				</thead>
+				<tbody>
+					
+				</tbody>
+				</table>
+
+				
+		</div></center>
+
+			</div></div>
+			<div class="" id="gen">
+										
+
+						
+					<span style="width:100%;" class="btn btn-warning">General Diagram</span>
+
+					<br>
+					<div class="row">
+						<div class="col-4">
+							<div class="" style="" id="test1">
+								<div id="color1">
+
+								</div>
+							</div>
+							above 75 and bellow 100
+						</div>
+						<div class="col-4">
+							<div class="" style="" id="test2">
+								<div id="color2">
+
+								</div>
+							</div>
+							above 50 and bellow 75
+						</div>
+						<div class="col-4">
+							<div class="" style="" id="test">
+								<div id="color">
+
+								</div>
+							</div>
+							bellow 50 and above 0
+						</div>
+					</div>
+			</div>
+		</div>
+						<span style="width:100%;" class="btn btn-warning">Thank you for Using</span>
+			</div>
+		</div>
+	</div>
+	</div></div>
+	<div id="id013" class="modal container-sm shadow">
+
+		<div class="modal-content animate" action="" id="form" name="my-form1">
+			<span style="width:100%;font-size:80px;display:none" class="btn btn-warning " id="geno">General</span><span class="btn btn-warning" style="font-size:80px;width:100%" id="spo">Specific</span>
+
+
+			<div id="gen">
+
+
+				<div class="card">
+					<span onclick="document.getElementById('id03').style.display='none';window.location.reload()"class="close" title="Close Modal"> &times;</span>
+
+					<div class="card-body">
+
+						<table id="myTabler" class="table table-sm table-responsive table-striped table-hover" style="font-size:40px;max-height:100%;min-height:100%">
+							<span style="font-size:60px">General Report </span>
+							<thead>
+								<th scope="col">No</th>
+
+								<th scope="col">75+&&100-</th>
+								<th scope="col">50+&&75-</th>
+								<th scope="col">50-&&0+</th>
+
+
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>Nstudent</td>
+									<td id="t1"></td>
+									<td id="t2"></td>
+									<td id="t3"></td>
+								</tr>
+							</tbody>
+
+						</table>
+
+						<span style="width:100%;font-size:80px" class="btn btn-warning">Female students </span>
+
+						<table id="myTabler" class="table table-sm table-responsive table-striped table-hover" style="font-size:40px;max-height:100%;min-height:100%">
+							<thead>
+								<th scope="col">No</th>
+
+								<th scope="col">75+&&100-</th>
+								<th scope="col">50+&&75-</th>
+								<th scope="col">50-&&0+</th>
+
+
+							</thead>
+							<tr>
+								<td>Nstudent</td>
+								<td id="tg1"></td>
+								<td id="tg2"></td>
+								<td id="tg3"></td>
+							</tr>
+						</tbody>
+
+					</table>
+					<span style="width:100%;font-size:80px" class="btn btn-warning">General Diagram</span>
+
+					<br>
+					<div class="row">
+						<div class="col-4">
+							<div class="" style="" id="test1">
+								<div id="color1">
+
+								</div>
+							</div>
+							above 75 and bellow 100
+						</div>
+						<div class="col-4">
+							<div class="" style="" id="test2">
+								<div id="color2">
+
+								</div>
+							</div>
+							above 50 and bellow 75
+						</div>
+						<div class="col-4">
+							<div class="" style="" id="test">
+								<div id="color">
+
+								</div>
+							</div>
+							bellow 50 and above 0
+						</div>
+					</div>
+
+				</div>
+				<span style="width:100%;font-size:80px" class="btn btn-warning">Thank you for Using</span>
+			</div>
+		</div>
+		<div class="" id="spec" style="display:none">
+			<span style="float:right;font-size:80px" onclick="document.getElementById('id06').style.display ='none'">X</span>
+
+	</div>
+
+</div>
+<div id="id07" class="modal container-sm shadow">
+	<form class="modal-content animate" action="" id="myForm1">
+		<span onclick="document.getElementById('id07').style.display ='none'" style="float:right;font-size:60px">X</span>
+
+		<div style="width:90%;margin:20px;padding:10px">
+			<span style="font-size:37px">choose filename.csv file format to backup</span>
+			<br><br><br>
+			<input type="file" class="form-control " style="font-size:60px" id="csvFile" accept=".csv" />
+			<br /><br>
+			<button type="submit" value="submit" style="font-size:60px"class="btn btn-success "value="" onclick="backme()" id="bank">backup</button>
+		</div>
+	</form>
+</div>
+<script src="subj.js"></script>
+<script type="text/javascript" charset="utf-8">
+function spo(){
+	//var spo = document.getElementById('spo');
+	//spo.addEventListener("click", ()=> {
+		var spo = document.getElementById('spo');
+
+		var gen = document.getElementById('gen');
+		var geno = document.getElementById('geno');
+		var spec = document.getElementById('spec');
+
+		spec.style.display = "block";
+		gen.style.display = "none";
+		spo.style.display = "none";
+		geno.style.display = "block";
+
+	}
+	function geno(){
+	var geno = document.getElementById('geno');
+	///spo/.addEventListener("click", ()=> {
+		//var geno = document.getElementById('geno');
+		var spec = document.getElementById('spec');
+		var spo = document.getElementById('spo');
+		var gen = document.getElementById('gen');
+
+		spec.style.display = "none";
+		gen.style.display = "block";
+		spo.style.display = "block";
+		geno.style.display = "none";
+
+	}
+</script>
+<script>
+	function myFunction() {
+		document.getElementById("myDropdown")
+		.classList.toggle("show");
+	}
+
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+
+			var dropdowns = document
+			.getElementsByClassName
+			("dropdown-content");
+
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+
+				if (openDropdown.classList.contains
+					('show')) {
+
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+</script>
+</body>
+</html>

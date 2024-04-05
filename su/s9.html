@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>.</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css" title="" type="" />
+	<link rel="stylesheet" href="../home.css" title="" type="" />
+</head>
+<style>
+	
+	#id03 button {
+		width: 100%;
+	}
+
+	
+	</style>
+	<link rel="stylesheet" href="../model.css" title="" type="" />
+</head>
+<style>
+	#mrka {
+		
+	}
+
+	#search {
+		
+	}
+
+	#top {
+		
+	}
+	#id03 {
+		
+	}
+	#id03 select,button {
+		
+	}
+	#id03 button {
+		
+	}
+
+	#hid0 {
+		
+
+		boreder: 1px solid black;
+	}
+
+	#set {
+		
+		boreder: 1px solid black;
+	}
+	
+
+	
+	#id04 input,label {
+	
+		
+		boreder: 1px solid black;
+	}
+	#id01 {
+		
+	}
+
+	#id02 input,label {
+		
+	}
+	#id04 input,label {
+		
+
+	}
+	table th {
+		background-color: gray;
+		border-collapse: collapse;
+		border: 1px solid black;
+	}
+	table tr,td {
+		border-collapse: collapse;
+		border: 1px solid black;
+	}
+	.sidenav {
+		background-color: green;
+		top: 0;
+		left: 0;
+		position: fixed;
+		z-index: 1;
+		transition: 6s;
+		display: none;
+		width: 0px;
+	}
+
+	.exam {
+		width: 85%;
+		
+		
+
+		padding: 20px;
+		margin: 10px;
+		background-color: white;
+		border-radius: 30px;
+
+	}
+
+	#table1 th {
+
+	}
+
+	#table1 td {
+	
+		
+	}
+
+	#table1 td {
+		
+
+	}.risidenav{
+		background-color: green;
+		top: 0;
+		left: 0;
+		position: fixed;
+		z-index: 1;
+		transition: 6s;
+		height: 100%;
+	display: none;
+		width: 0px;
+		
+		
+	}.card{
+		width: 45%;
+		height: 260px;
+		padding: 20px;
+		place-items: center;
+		float: left;
+		margin: 20px;
+		border-radius: 30px;
+
+		font-size: 40px;
+
+	}#status{
+		overflow-y: auto;
+		max-height: 90%;
+	}	.totv {
+		width: 85%;
+		padding: 20px;
+		margin: 10px;
+		background-color: white;
+		border-radius: 30px;
+
+	}@media screen and (min-width: 360px) {
+    
+		
+	
+
+	#table1 td {
+
+	}
+}
+</style>
+<body class="bg-success" onload="body()">
+
+
+	<div class="container-sm shadow bg-info" id="top">
+		
+		<span id="hid1" class="lu" onclick="window.open('../subj.html','_self')" style="font-size: 30px; color:red;margin-left:10px;width:48%">	<b>&larr;</b>
+		</span>
+		<span id="hid" class="btn bg-white" onclick="exportTableToCSV('person.csv')" style="">Print </span>
+
+
+		<!--  <button Class ="btn btn-success" onclick="printa()">print</button>
+							'<span id="hid" class="btn bg-white" onclick="print()" style="font-size:50px;margin-left:50px">print</span>
+							--></a>
+	<span>
+	</span>
+	<span>
+
+
+		<span class="dropdown">
+			<span onclick="myFunction()"
+
+				class="dropbtn bg-info " style="">more</span>
+
+			
+			<div id="myDropdown"
+				class="dropdown-content  " style="">
+
+				<a href="#home">
+					<span id="hid0" class=" btn " onclick="document.getElementById('id03').style.display='block';" style="border-radius:20px;">exam number</span>
+					<span>
+					</a>
+					<a href="#about">
+						<span class="btn" id="set" onclick="document.querySelector('#id04').style.display='block'">edit name</span>
+					</a>
+					<a href="#about">
+						<span class="btn" id="set" onclick="sidmute()">Report</span>
+					</a>
+					<a href="#about">
+						<span class="btn" id="set" onclick="rightside()">Details</span>
+					</a>
+
+				</div>
+
+			</span>
+		</span>
+
+	</span>
+
+</div>
+
+
+<center>
+		<div class="risidenav bg-success" id="rsid">
+
+	<span style="float:right;margin-right:20px;" onclick="document.getElementById('rsid').style.display='none'">X</span>
+
+	<button type="submit">Students Details </button>
+		<div class="status" id="status">
+			
+		</div>
+		<center>
+		<div class="card bg-white" id="det" style="border-radius:20px">
+			<div class="card-header">
+				<span id="nmamk" style="color:black"></span>
+						<span class="btn btn-info" style="float:right;margin-right:5jpx;" onclick="backme()">< back</span>
+
+			</div>
+			<div class="card-body">
+
+			<span id="more"></span>
+			</div>
+			<div class="card-footer">
+				<span>Details about this student</span>
+			</div>
+		</div>
+	</div></center>
+	<div class="sidenav bg-success" id="sidenav">
+
+<span style=""><input type="checkbox" name="smrp" id="smrp" value="" style="margin-left:30px;" />&nbsp;&nbsp;&nbsp;&nbsp;report above given total</span>
+<span class="btn" onclick="document.getElementById('sidenav').style.display='none'" style="float:right;color:red;">X</span>
+
+<div class="totv" style="display:none" id="totv">
+	<span id="error" class="text-danger"></span>
+
+<label for="" class="form-label">Enter minimum of total</label>
+<input type="number" name="mtot" id="mtot" value="" class="form-control" placeholder="Enter minimum total" style="font-size:30px" />
+<label for="" class="form-label">Select gender</label><br />
+<input type="radio" name="male" id="male" value="1" class="" placeholder="example:2 if you give two assisments" style="font-size:60px" /><b>male</b>
+<input type="radio" name="male" id="female" value="2" class="" placeholder="example:2 if you give two assisments" style="font-size:60px" /><b>female</b>
+<span id="avrpo" style="font-size:30px"></span>
+
+<button  class="btn btn-warning" style="font-size:60px" onclick="thead()" id="chexam1" placeholder="example:2 if you give them two assisments" style="width:100%">check</button>
+<span class="btn bg-secondary" onclick="exportTableToCSVin('person.csv')" style="font-size:60px;width:100%">Print </span>
+
+</div>	
+		<div class="exam" id="exam">
+		<span id="error" class="text-danger"></span>
+
+			<label for="" class="form-label">Enter assisments number</label>
+
+			<input type="number" name="exam" id="exnumber" value="" class="form-control" placeholder="example:2 if you give two assisments" style="" />
+			<button class="" type="submit" style="" class="btn btn-primary" onclick="thea()" id="chexam" placeholder="example:2 if you give them two assisments" style="width:100%">check</button>
+			<span class="btn bg-secondary" onclick="exportTableToCSVin('person.csv')" style="width:100%">Print </span>
+
+
+		</div>
+		<table id="table1" class="table table-sm table-responsive table-striped table-hover bg-white " style="max-height:100%">
+			<thead id="thead" style="float:lef5t">
+
+			</thead>
+			<tbody>
+				<div class="shadow-lg">
+
+
+					<input type="text" id="search1" class="form-control" placeholder="@ search...." style="width:60%;">
+					<span style=""><input type="checkbox" name="chb" id="right" value="1" style="width:10%g" /><sub class="text-white">color</sub>
+
+
+					<input type="color" name="clr" id="cl" value="#ff9b85" style="width:10%" />
+					<input type="checkbox" name="chb1" id="right" value="" style="width:10%l" /><sub class="text-white">complete</sub>
+</span>
+				</div>
+			</tbody>
+		</table>
+
+	</div>
+	<div class="container-sm shadow bg-white  m-2">
+
+
+		<div id="id08" class="modal container-sm shadow">
+			<form class="modal-content animate" action="" id="markform" name="markform" onsubmit="return markforma()">
+				<span onclick="document.getElementById('id08').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+				<button style="width:100%;">each mark percentage specification form</button>
+
+				<div class="" id="itakeit" style="padding:20px;margin:10px">
+
+				</div>
+				<button type="submit" style="width:100%;">save</button>
+			</form>
+		</div>
+
+		<div id="id03" class="modal container-sm shadow">
+
+			<form class="modal-content animate" action="" id="form" name="my-form">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id03').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+				</div>
+
+
+				<div class="container-sm shadow p-2">
+					<p class="bg-success ">
+						number of your exam
+					</p>
+					<input type="hidden" name="no" id="no" value="" />
+
+					<label class="form-label">choose number of assisments you want to take </label>
+					<select class="form-control " id="sn">
+						<option value="5">five</option>
+						<option value="6">six</option>
+						<option value="7"> seven</option>
+						<option value="8">eight</option>
+						<option value="9">nine</option>
+						<option value="10">ten</option>
+						<option value="11"> eleven</option>
+						<option value="12">twelve</option>
+
+					</select>
+					<button type="submit" id="sup" onclick="snumber()" style="width:100%" class="btn btn-primary ">save</button>
+
+				</div>
+			</form>
+		</div>
+
+
+	</div>
+	<div class="container-sm shadow m-2" id="mrka">
+		<table id="myTable" class="table table-sm table-responsive table-striped table-hover bg-white " style="max-height:100%">
+			<thead>
+				<th scope="col">No</th>
+				<th scope="col">fname</th>
+				<th scope="col" id="">lname<input type="text" id="mark1" style="width: 20px;display: none"></th>
+				<th scope="col" id="mk" class="lt1">test1</th>
+				<th scope="col" id="mark3" class="lt2">test2 </th>
+				<th scope="col" class="lt3">test3</th>
+				<th scope="col" class="lt4">test4</th>
+				<th scope="col" id="mk5" class="lt5">test5<input type="text" id="mark1" style="width: 20px;display: none"></th>
+				<th scope="col" id="mk6" class="lt6">test6</th>
+				<th scope="col" id="mk7" class="lt7">test7</th>
+				<th scope="col" id="mk8" class="lt8">test8</th>
+				<th scope="col" id="mk9" class="lt9">test9<input type="text" id="mark1" style="width: 20px;display: none"></th>
+				<th scope="col" id="mk10" class="lt10">test10</th>
+				<th scope="col" id="mk11" class="lt11">test11<input type="text" id="mark1" style="width: 20px;display: none"></th>
+				<th scope="col" id="mk12" class="lt12">test12</th>
+
+				<th scope="col" id="">Total<input type="text" id="mark1" style="width: 20px;display: none"></th>
+
+				<th scope="col" id="mark3">update</th>
+				<input type="text" id="search" class="form-control" placeholder="@ search...." style="width:70%">
+				<input type="checkbox" name="color" id="color" value="1" style="width:20%" />
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+
+	</div>
+	<div id="id02" class="modal container-sm shadow">
+
+		<form class="modal-content animate" action="" name="">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+			</div>
+
+
+			<div class="container-sm shadow p-2">
+				<p class="bg-success ">
+					mark update form
+				</p>
+				<div style="display:none">
+
+
+					<input type="hidden" id="inputA" min="" max="" value="" name="age" class="inputA form-control mb-2" placeholder="" style="width: 90%"><br>
+
+					<input type="hidden" id="inputNL" min="" max="" value="" name="firstname" class="inputNL form-control mb-2" placeholder="" style="width: 90%"><br>
+					<input type="hidden" id="inputNH" min="" max="" value="" name="lastname" class=" inputNH form-control mb-2" placeholder="" style="width: 90%"><br>
+
+					<input type="hidden" id="gender" min="" max="" value="" name="gender" class="gender form-control mb-2" placeholder="" style="width: 90%"><br>
+
+					<input type="hidden" id="inputJK" min="" max="" value="" name="sid" class=" inputJK form-control mb-2" placeholder="" style="width: 90%"><br>
+
+					<input type="hidden" id="midle" min="" max="" value="" name="midlename" class="midle form-control mb-2" placeholder="" style="width: 90%"><br>
+
+					<input type="hidden" name="id" id="id" value="" class="id" />
+
+					<input type="hidden" name="total" id="total" value="" class="total" />
+
+
+					<input type="hidden" name="no" id="no" value="" class="no" />
+
+					<input type="hidden" name="av" id="av" value="" />
+				</div>
+				<span id="stmn" Class="btn btn-info" style="width:100%;"></span>
+
+				<label class="lp1 form-label"><b>test one</b></label>
+				<input type="number" class="markbn form-control"placeholder="" name="mark1" id="mark1" value="0">
+
+				<label class="lp2 form-label"><b>test two</b></label>
+				<input type="number" class="markb2 form-control"placeholder="" name="mark2" id="mark2" value="0">
+
+				<label class="lp3 form-label"><b>test three</b></label>
+				<input type="number" class="markb3 form-control"placeholder="" name="mark3" id="mark3" value="0">
+
+				<label class="lp4 form-label"><b>test four</b></label>
+				<input type="number" class="markb4 form-control"placeholder="" name="mark4" id="mark4" value="0">
+
+				<label class="lp5 form-label" id=""><b>test five</b></label>
+				<input type="number" class="markb5 form-control"placeholder="" name="mark5" id="mark5" value="0">
+				<div class="sb5">
+
+					<label class="lp6 form-label" id="l6"><b>test six</b></label>
+					<input type="number" class="markb6 form-control"placeholder="" name="mark6" id="mark6" value="0">
+					<div class="sb6">
+
+
+						<label class="lp7 form-label" id="l7"><b>test seven</b></label>
+						<input type="number" class="markb7 form-control"placeholder="" name="mark7" id="mark7" value="0">
+						<div class="sb7">
+							<label class="lp8 form-label" id="l8"><b>test eight</b></label>
+							<input type="number" class="markb8 form-control"placeholder="" name="mark8" id="mark8" value="0">
+							<div class="sb8">
+								<label class="lp9 form-label" id="l9"><b>test nine</b></label>
+								<input type="number" class="markb9 form-control"placeholder="" name="mark9" id="mark9" value="0">
+								<div class="sb9">
+									<label class="lp10 form-label" id="l10"><b>test ten</b></label>
+									<input type="number" class="markb10 form-control"placeholder="" name="mark10" id="markb10" value="0">
+									<div class="sb10">
+										<label class="lp11 form-label" id="l11"><b>test eleven</b></label>
+										<input type="number" class="markb11 form-control"placeholder="" name="mark11" id="mark11" value="0">
+										<div class="sb11">
+											<label class="lp12 form-label" id="l12"><b>test twelve</b></label>
+											<input type="number" class="markb12 form-control"placeholder="" name="mark12" id="mark12" value="0">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<button type="submit" id="sbmt">save</button>
+
+
+
+			</div>
+		</form>
+	</div>
+
+
+
+	<div id="id04" class="modal container-sm shadow">
+
+		<form class="modal-content animate" action="" name="sbform" onsubmit="event.preventDefault();subform()">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id04').style.display='none'"class="close" title="Close Modal"> &times;</span>
+
+
+			</div>
+
+
+			<div class="container-sm shadow p-2">
+				<p class="bg-success ">
+					set name for asissiment form
+				</p>
+				<input type="hidden" name="no" id="no" value="" />
+
+
+				<label class="form-label"><b>replace test one</b></label>
+				<input type="text" class="sb1 form-control"placeholder="" name="sb1" id="sb1" value="">
+
+				<label class=" form-label"><b>replace test two</b></label>
+				<input type="text" class="sb2 form-control"placeholder="" name="sb2" id="sb2" value="">
+
+				<label class="form-label"><b>replace test three</b></label>
+				<input type="text" class="sb3 form-control"placeholder="" name="sb3" id="sb3" value="">
+
+				<label class="form-label"><b>replace test four</b></label>
+				<input type="text" class="sb4 form-control"placeholder="" name="sb4" id="sb4" value="">
+
+				<label class="form-label"><b>replace test five</b></label>
+				<input type="text" class="sb5 form-control"placeholder="" name="sb5" id="sb5" value="">
+				<div class="s5">
+
+					<label class="form-label" id="l6"><b>replace test six</b></label>
+					<input type="text" class="sb6 form-control"placeholder="" name="sb6" id="sb6" value="">
+					<div class="s6">
+
+
+						<label class="form-label" id="l7"><b>replace test seven</b></label>
+						<input type="text" class="sb7 form-control"placeholder="" name="sb7" id="sb7" value="">
+						<div class="s7">
+							<label class="form-label" id="l8"><b>replace test eight</b></label>
+							<input type="text" class="sb8 form-control"placeholder="" name="sb8" id="sb8" value="">
+							<div class="s8">
+								<label class="form-label" id="l9"><b>replace test nine</b></label>
+								<input type="text" class="sb9 form-control"placeholder="" name="sb9" id="sb9" value="">
+								<div class="s9">
+									<label class="form-label" id="l10"><b>replace test ten</b></label>
+									<input type="text" class="sb10 form-control"placeholder="" name="sb10" id="mark10" value="">
+									<div class="s10">
+										<label class="form-label" id="l11"><b>replace test eleven</b></label>
+										<input type="text" class="sb11 form-control"placeholder="" name="sb11" id="mark11" value="">
+										<div class="s11">
+											<label class="form-label" id="l12"><b>replace test twelve</b></label>
+											<input type="text" class="sb12 form-control"placeholder="" name="sb12" id="sb12" value="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<button type="submit" id="sbmt" onclick="window.location.reload()">save</button>
+
+
+
+			</div>
+		</form>
+	</div>
+</center>
+
+</script>
+<script src="../csv.js"></script>
+<script src="../csv1.js"></script>
+
+<script src="s9.js">
+
+</script>
+
+</script>
+</body>
+</html>

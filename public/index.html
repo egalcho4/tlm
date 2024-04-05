@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>HTML</title>
+
+
+	<link rel="stylesheet" type="text/css" href="..\css\bootstrap.min.css">
+	
+</head>
+
+<body id="bd" class="bg-success ">
+
+    <div class ="btn btn-secondary " id="b" style="margin-left:100px;margin-top:30px">
+        
+    </div>
+	<div class="container-sm shadow-lg m-10" style="margin:10%;margin-top:25%">
+		
+	
+	<center><h1 class="btn btn-secondary bg-danger " style="margin-top:20px">login page</h1></center>
+	<span id="demo" style ="color:red;margin:0% 20% ;display:none" class =" btn   bg-white"></span>
+	
+	<center>
+	    <div class="container-sm shadow bg-white m-3">
+		
+
+
+			
+
+
+			<label for="inputJK"class="form-label">password</label><br>
+			<input type="password" class="pssr" style="width:150px;border-radius:30px" id="pssr" name="pssr"> 
+
+
+ <button type="submit" class ="btn btn-secondary " onclick="onlogin();">login</button><br>
+
+		
+		<br>
+		</div>
+			<button class="btn btn-primary " style="padding-buttom:10px"><a href="..\reg.html" style="color:white">register</a></button>
+
+	</center>
+
+
+</div>
+ 
+<center><div class="container-sm shadow-lg " style="max-height:100px;width:200px;background: black;">
+        <marquee id="mytabl" style="color:white"></marquee>
+    
+   
+</div></center></div>
+	<!-- Project -->
+	<script src="server.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
+    
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAMIZOFvocSQ8vIyL18agfol1K6Z4CsHiw",
+            authDomain: "teacher-8ee59.firebaseapp.com",
+            databaseURL: "https://teacher-8ee59-default-rtdb.firebaseio.com",
+            projectId: "teacher-8ee59",
+           storageBucket: "teacher-8ee59.appspot.com",
+            messagingSenderId: "785627417584",
+           appId: "1:785627417584:web:8c16b87198083760d72b35"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var messagesRef = firebase.database().ref('adv');
+        
+        
+        var number=0;
+        const table=document.querySelector('#mytabl');
+        var leadsRef = firebase.database().ref('adv');
+      leadsRef.on('value', function(snapshot) {
+     snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+     
+     
+      table.innerHTML=childData.name+": posted by admin "+childData.dt;
+     
+    });
+});
+
+
+  
+</script>
+    </script>
+</body>
+</html>
